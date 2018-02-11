@@ -3,9 +3,6 @@
 /**
  * This sample demonstrates a simple skill built with the Amazon Alexa Skills
  * nodejs skill development kit.
- * This sample supports multiple lauguages. (en-US, en-GB, de-DE).
- * The Intent Schema, Custom Slots and Sample Utterances for this skill, as well
- * as testing instructions are located at https://github.com/alexa/skill-sample-nodejs-fact
  **/
 
 'use strict';
@@ -32,12 +29,15 @@ const CONTINUE_MESSAGE = 'Do you want to continue?';
 //=========================================================================================================================================
 const data =
     [
-    ['Tiffany Pham the founder of Mogul. ','Prioritization—figuring out which tasks will really move the needle the most—would be key. ',
-        'I ask myself, Out of all the tasks I have right now, what is the one that would bring back the most? And thats what I do next. '],
-    ['Vanessa Hurst the co-founder of Girl Develop It and the CEO of CodeMontage. ', 'Feeling a little uncomfortable with your skills is a sign of learning and continuous'+
+    ['Tiffany Pham is the founder of Mogul. ','Prioritization—figuring out which tasks will really move the needle the most—would be key. ',
+        'I ask myself, Out of all the tasks I have right now, what is the one that would bring back the most? And that\'s what I do next. ',
+        'Be confident and believe in yourself because if you believe then others will too. ','This confidence and belief will allow you to enable other women. ',
+        'It’s about believing in your goals and what you are passionate about, and from that, others will become passionate about it too. '],
+    ['Vanessa Hurst the co-founder of Girl Develop It and the CEO of CodeMontage. ', 'Feeling a little uncomfortable with your skills is a sign of learning and continuous '+
      'learning is what the tech industry thrives on! ', 'It’s important to seek out environments where you are supported, but where you have the chance to be uncomfortable and learn new things. '],
     ['Erin Teague, Director of Product of Yahoo. ' , 'Changing an industry and culture is extremely difficult. ', 'There is some progress, however, the change is not going to come quick. ',
-    'Embrace your differences and if you need to prove yourself again and again. Never stop learning. '],
+    'Embrace your differences and if you need to prove yourself again and again. Never stop learning. ', 'Recognize and embrace your uniqueness. It does not have to be a disadvantage. ',
+    'You are going to have a unique voice. It’s important to embrace that.'],
     ['Michelle Zatlyn, Co-Founder of CloudFlare. ', 'People do not take opportunities because the timing is bad, the financial side unsecure ',
     'Too many people are overanalyzing. Sometimes you just have to go for it. '],
     ['Angie Chang, VP of Strategic Partnerships at Hackbright Academy. ', 'Learn to ask for things. ', 'Be concise, relevant, and brave. '],
@@ -48,36 +48,17 @@ const data =
     ['Grace Hopper, developer of the first compiler for a programming language', 'A ship in port is safe, but that is not what ships are for. ',
     'Sail out to sea and do new things. ']
     ];
-    //First Quote
-    //'Tiffany Pham, Founder of Mogul: When I look back to my younger self, I would tell myself to be'+
-    //' confident first and foremost, to believe in myself, before anyone else because if I believe in myself,'
-    //+' then others will too. And ultimately, this confidence and belief in myself would enable me to enable'
-    //+'other women around the world. It’s about believing in your goals and what you are passionate about, and from that, others will become passionate about it too.'
-
-    //Second quote
-    //' Vanessa Hurst, Co-Founder of Girl Develop It and CEO of Code Montage, Feeling a little uncomfortable with your skills is a sign of learning, and continuous'+
-    //'learning is what the tech industry thrives on! It’s important to seek out environments where you are supported, but where you have the chance to be uncomfortable and learn new things.'
-
-    //Third quote
-    //'Erin Teague, Director of Product of Yahoo, Recognize and embrace your uniqueness. I don’t think the ratios are going to change anytime soon. But, I don’t think it'
-    //+' has to be a disadvantage. Being a Black woman, being a woman in general, on a team of all men, means that you are going to have a unique voice. It’s important to embrace that.'
-
-    //Fourth quote
-    //'Michelle Zatlyn, Co-Founder of CloudFlare, people don’t take opportunities because the timing is bad, the financial side unsecure. Too many people are overanalyzing. Sometimes you just have to go for it'
-const factArr = data;
+    const factArr = data;
 const factIndex = 0; //Math.floor(Math.random() * factArr.length);
 let attribute = {"index":0, "inner":0};
 
 
-//=========================================================================================================================================
-//Editing anything below this line might break your skill.
 //=========================================================================================================================================
 
 exports.handler = function(event, context, callback) {
     var alexa = Alexa.handler(event, context);
     alexa.appId = APP_ID;
     alexa.registerHandlers(handlers);
-    //alexa.dynamoDBTableName = 'IndexTable';
     alexa.execute();
 };
 
@@ -89,27 +70,8 @@ const handlers = {
         const speechOutput = "Are you ready to be empowered?"
         this.response.speak(speechOutput);
         this.emit(':ask', speechOutput);
-
-        //attribute['index'] = factIndex;
-        //data[attribute['inner']] = 0;
-        // const speechOutput = GET_FACT_MESSAGE + factArr[attribute['index']['inner']] + CONTINUE_MESSAGE;
-        // this.response.cardRenderer(SKILL_NAME, speechOutput);
-        // // this.response.speak(speechOutput);
-        // console.log('this keys are ' + Object.keys(this));
-
-        // //factIndex++;
-        // //sessionAttributes['index'] += 1;
-        // //console.log("this is the attribute for index" + this.attributes.index);
-        // //console.log(sessionAttributes);
-        // attribute['index'] += 1;
-        // this.emit(':ask', speechOutput);
     },
     'AMAZON.YesIntent': function () {
-        // const speechOutput = GET_FACT_MESSAGE + data[attribute['index']][attribute['inner']] + CONTINUE_MESSAGE;
-        // this.response.cardRenderer(SKILL_NAME, speechOutput);
-        // attribute['index']++;
-        // attribute['inner']++;
-        // this.response.speak(speechOutput);
         console.log('this keys are ' + Object.keys(this));
         if (attribute['inner'] === data[attribute['index']].length  ) {
              const speechOutput = 'Now it is your chance to empower the world.';
@@ -131,28 +93,7 @@ const handlers = {
              this.emit(':ask', speechOutput);
             //attribute['index']+=1;
 
-
         }
-
-        //factIndex++;
-        //sessionAttributes['index'] += 1;
-        //console.log("this is the attribute for index" + this.attributes.index);
-        //console.log(sessionAttributes);
-
-        // attribute['index'] += 1;
-        // this.emit(':ask', speechOutput);
-        // if (attribute['index'] === data.length-1) {
-        //     const speechOutput = 'Now it is your chance to empower the world.';
-        //     this.emit(':tell', speechOutput);
-        // } else if  (attribute['index'] === data.length-2) {
-        //     const speechOutput = data[attribute['index']];
-        //     this.emit(':ask', speechOutput);
-        //     attribute['index']+=1;
-        // } else {
-        //      const speechOutput = data[attribute['index']] + CONTINUE_MESSAGE;
-        //      this.emit(':ask', speechOutput);
-        //      attribute['index']+=1;
-        // }
     },
     'AMAZON.NoIntent': function () {
         const speechOutput = 'Goodbye';
