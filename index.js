@@ -29,7 +29,8 @@ const STOP_MESSAGE = 'Goodbye!';
 //TODO: Replace this data with your own.  You can find translations of this data at http://github.com/alexa/skill-sample-node-js-fact/lambda/data
 //=========================================================================================================================================
 const data = [
-    'Tiffany Pham the founder of Mogul, a solely female platform to allow women to communicate and share ideas. She started ',
+    'Tiffany Pham the founder of Mogul, a solely female platform to allow women to communicate and share ideas. She started '
+    + 'this is added',
     'Despite being farther from the Sun, Venus experiences higher temperatures than Mercury.',
     'Venus rotates counter-clockwise, possibly because of a collision in the past with an asteroid.',
     'On Mars, the Sun appears about half the size as it does on Earth.',
@@ -62,7 +63,7 @@ const handlers = {
     'GetNewFactIntent': function () {
         const factArr = data;
         const factIndex = Math.floor(Math.random() * factArr.length);
-        const randomFact = factArr[factIndex];
+        const randomFact = factArr[0];
         const speechOutput = GET_FACT_MESSAGE + randomFact;
 
         this.response.cardRenderer(SKILL_NAME, randomFact);
