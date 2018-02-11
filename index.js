@@ -51,7 +51,7 @@ const data =
     ['Grace Hopper, developer of the first compiler for a programming language', 'A ship in port is safe, but that is not what ships are for. ',
     'Sail out to sea and do new things. ']
     ];
-const factArr = data;
+    const factArr = data;
 const factIndex = 0; //Math.floor(Math.random() * factArr.length);
 let attribute = {"index":0, "inner":0};
 
