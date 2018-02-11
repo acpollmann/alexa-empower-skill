@@ -29,7 +29,7 @@ const STOP_MESSAGE = 'Goodbye!';
 //TODO: Replace this data with your own.  You can find translations of this data at http://github.com/alexa/skill-sample-node-js-fact/lambda/data
 //=========================================================================================================================================
 const data = [
-    'Tiffany Pham the founder of Mogul, a solely female platform to allow women to communicate and share ideas.' +
+    'Tiffany Pham the founder of Mogul, a solely female platform to allow women to communicate and share ideas.' +"another sentence"
     'After years of writing for school newspapers, and Harvard Business School she was in charge of initiative ' +
     'and partnerships for CBS. She created her company after recieving a large response from femals asking for help.' +
     'She has faced difficulties creating the internal structure of Mogul and developing her growing company',
