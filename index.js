@@ -64,6 +64,7 @@ exports.handler = function(event, context, callback) {
     alexa.appId = APP_ID;
     alexa.registerHandlers(handlers);
     alexa.execute();
+
 };
 
 const handlers = {
@@ -73,12 +74,21 @@ const handlers = {
     'GetNewFactIntent': function () {
         const factArr = data;
         const factIndex = Math.floor(Math.random() * factArr.length);
-        const randomFact = factArr[0];
-        const speechOutput = GET_FACT_MESSAGE + randomFact;
+        const randomFact = factArr[factIndex];
+        const speechOutput = GET_FACT_MESSAGE + randomFact + "Do you want to continue?";
 
         this.response.cardRenderer(SKILL_NAME, randomFact);
-        this.response.speak(speechOutput);
-        this.emit(':responseReady');
+        // this.response.speak(speechOutput);
+        console.log('this keys are ' + Object.keys(this));
+        this.emit(':ask', speechOutput);
+    },
+    'AMAZON.YesIntent': function () {
+        const speechOutput = "Access array. Do you want to continue?";
+        this.emit(':ask', speechOutput);
+    },
+    'AMAZON.NoIntent': function () {
+        const speechOutput = 'Goodbye';
+        this.emit(':tell', speechOutput);
     },
     'AMAZON.HelpIntent': function () {
         const speechOutput = HELP_MESSAGE;
