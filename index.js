@@ -29,19 +29,15 @@ const STOP_MESSAGE = 'Goodbye!';
 //TODO: Replace this data with your own.  You can find translations of this data at http://github.com/alexa/skill-sample-node-js-fact/lambda/data
 //=========================================================================================================================================
 const data = [
-    'Tiffany Pham the founder of Mogul, a solely female platform to allow women to communicate and share ideas. She started ',
-    'Despite being farther from the Sun, Venus experiences higher temperatures than Mercury.',
-    'Venus rotates counter-clockwise, possibly because of a collision in the past with an asteroid.',
-    'On Mars, the Sun appears about half the size as it does on Earth.',
-    'Earth is the only planet not named after a god.',
-    'Jupiter has the shortest day of all the planets.',
-    'The Milky Way galaxy will collide with the Andromeda Galaxy in about 5 billion years.',
-    'The Sun contains 99.86% of the mass in the Solar System.',
-    'The Sun is an almost perfect sphere.',
-    'A total solar eclipse can happen once every 1 to 2 years. This makes them a rare event.',
-    'Saturn radiates two and a half times more energy into space than it receives from the sun.',
-    'The temperature inside the Sun can reach 15 million degrees Celsius.',
-    'The Moon is moving approximately 3.8 cm away from our planet every year.'
+    'Tiffany Pham the founder of Mogul, a solely female platform to allow women to communicate and share ideas.' +
+    'After years of writing for school newspapers, and Harvard Business School she was in charge of initiative ' +
+    'and partnerships for CBS. She created her company after recieving a large response from femals asking for help.' +
+    'She has faced difficulties creating the internal structure of Mogul and developing her growing company',
+    //'6. Tiffany Pham, Founder of Mogul: When I look back to my younger self, I would tell myself to be'+
+    //' confident first and foremost, to believe in myself, before anyone else because if I believe in myself,'
+    //+' then others will too. And ultimately, this confidence and belief in myself would enable me to enable'
+    //+'other women around the world. It’s about believing in your goals and what you are passionate about, and from that, others will become passionate about it too.'
+
 ];
 
 //=========================================================================================================================================
