@@ -20,8 +20,8 @@ const Alexa = require('alexa-sdk');
 const APP_ID = undefined;
 
 const SKILL_NAME = 'Empower Women';
-const GET_FACT_MESSAGE = "Here's your fact: ";
-const HELP_MESSAGE = 'You can say tell me a space fact, or, you can say exit... What can I help you with?';
+const GET_FACT_MESSAGE = "Here's your inspirational quote: ";
+const HELP_MESSAGE = 'You can say tell me empower me, or, you can say exit... What can I help you with?';
 const HELP_REPROMPT = 'What can I help you with?';
 const STOP_MESSAGE = 'Goodbye!';
 const CONTINUE_MESSAGE = 'Do you want to continue?';
@@ -32,13 +32,21 @@ const CONTINUE_MESSAGE = 'Do you want to continue?';
 //=========================================================================================================================================
 const data =
     [
-        ['Tiffany Pham the founder of Mogul.','Obstacle: prioritization—figuring out which tasks will really move the needle the most—would be key.',
-        '[I ask] myself, Out of all the tasks I have right now, what is the one that would bring back the most? And thats what I do next.'],
-    ['Vanessa Hurst the co founder of Girl Develop It and the CEO of CodeMontage.', ' Obstacle: She struggled with the desire to want to make a diference now.',
-    'When she joined Capital IQ she was learning more about production and ownership so she questioned her qualifications as a biomedical engineer turned developer. '],
-    ['Erin Teague, Director of Product of Yahoo.' , ' Obstacle: Change an industry and culture is extremely difficult.', 'There is some progress, however the change is not going to come quick.',
-    'Embrace your differences and if you need to prove yourself again and again. Mever stop learning'],
-    ['Michelle Zatlyn, Co-Founder of CloudFlare. Obstacle: ']
+    ['Tiffany Pham the founder of Mogul. ','Prioritization—figuring out which tasks will really move the needle the most—would be key. ',
+        'I ask myself, Out of all the tasks I have right now, what is the one that would bring back the most? And thats what I do next. '],
+    ['Vanessa Hurst the co-founder of Girl Develop It and the CEO of CodeMontage. ', 'Feeling a little uncomfortable with your skills is a sign of learning and continuous'+
+     'learning is what the tech industry thrives on! ', 'It’s important to seek out environments where you are supported, but where you have the chance to be uncomfortable and learn new things. '],
+    ['Erin Teague, Director of Product of Yahoo. ' , 'Changing an industry and culture is extremely difficult. ', 'There is some progress, however, the change is not going to come quick. ',
+    'Embrace your differences and if you need to prove yourself again and again. Never stop learning. '],
+    ['Michelle Zatlyn, Co-Founder of CloudFlare. ', 'People do not take opportunities because the timing is bad, the financial side unsecure ',
+    'Too many people are overanalyzing. Sometimes you just have to go for it. '],
+    ['Angie Chang, VP of Strategic Partnerships at Hackbright Academy. ', 'Learn to ask for things. ', 'Be concise, relevant, and brave. '],
+    ['Jess Lee, CEO of Polyvore. ', 'When I was interviewing at Google, one of my interviewers was Melissa Mayer, who told me to constantly challenge myself by going where I could grow the most. ',
+    'Even if you do not succeed, at least you will have learned a lot. '],
+    ['Megan Smith, CTO of the United States. ', 'If you can find something you are really passionate about, jump on that. ',
+    'If you are passionate about something and you can bring your talent, you will be unstoppable. '],
+    ['Grace Hopper, developer of the first compiler for a programming language', 'A ship in port is safe, but that is not what ships are for. ',
+    'Sail out to sea and do new things. ']
     ];
     //First Quote
     //'Tiffany Pham, Founder of Mogul: When I look back to my younger self, I would tell myself to be'+
@@ -58,7 +66,7 @@ const data =
     //'Michelle Zatlyn, Co-Founder of CloudFlare, people don’t take opportunities because the timing is bad, the financial side unsecure. Too many people are overanalyzing. Sometimes you just have to go for it'
 const factArr = data;
 const factIndex = 0; //Math.floor(Math.random() * factArr.length);
-var attribute = {"index":0, "inner":-1};
+let attribute = {"index":0, "inner":0};
 
 
 //=========================================================================================================================================
@@ -82,8 +90,8 @@ const handlers = {
         this.response.speak(speechOutput);
         this.emit(':ask', speechOutput);
 
-        // attribute['index'] = factIndex;
-        // attribute['inner'] = 0;
+        //attribute['index'] = factIndex;
+        //data[attribute['inner']] = 0;
         // const speechOutput = GET_FACT_MESSAGE + factArr[attribute['index']['inner']] + CONTINUE_MESSAGE;
         // this.response.cardRenderer(SKILL_NAME, speechOutput);
         // // this.response.speak(speechOutput);
@@ -103,12 +111,15 @@ const handlers = {
         // attribute['inner']++;
         // this.response.speak(speechOutput);
         console.log('this keys are ' + Object.keys(this));
-        if (attribute['inner'] === data[attribute['index']].length -1 ) {
+        if (attribute['inner'] === data[attribute['index']].length  ) {
              const speechOutput = 'Now it is your chance to empower the world.';
-            //attribute['index']+=1;
-             //attribute['inner']+=1;
+             attribute['index'] += 1;
+             if (attribute['index'] === data.length) {
+                 attribute['index'] = 0;
+             }
+             attribute['inner'] = 0;
              this.emit(':tell', speechOutput);
-        } else if (attribute['inner'] === data[attribute['index']].length-2) {
+        } else if (attribute['inner'] === data[attribute['index']].length-1) {
             const speechOutput = data[attribute['index']][attribute['inner']];
             //attribute['index']+=1;
             attribute['inner']+=1;
