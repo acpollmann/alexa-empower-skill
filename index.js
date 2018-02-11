@@ -34,9 +34,12 @@ const data = [
     'Vanessa Hurst the co founder of Girl Develop It and the CEO of CodeMontage. She faced the desire to want to make a diference immediately but not being able to.'
     +'When she joined Capital IQ, she learned more about production and ownership. She questioned her qualifications as a biomedical engineer turned developer, but'
     +'her enjoyment and challenges encoraged ',
-    'Erin Teague, Director of Product of Yahoo. Obstacle: Change an industry and culture is extremely difficult. There is some progress, however the change is not going to'
-    + 'come quick. Embrace your differences and if you need to prove yourself again and again. Mever stop learning',
-    'Michelle Zatlyn, Co-Founder of CloudFlare. Obstacle:  '
+    'Erin Teague, Director of Product of Yahoo. Obstacle: Change in an industry and culture is extremely difficult. There is some progress, however the change is not going to'
+    + 'come quick. Embrace your differences and if you need to prove yourself again and again. Never stop learning',
+    'Michelle Zatlyn, Co-Founder of CloudFlare. She grew up in Canada, never expecting to co-found a billion dollar company. She made the decision'
+    +' to immigrate to the US, and with hard work helped build CloudFlare to its size today',
+    'Amber Gordon, Trust in yourself, believe that your voice matters, and know that your words are good enough. She decided to form Femsplain against'
+    + 'people who did not agree with the purpose of the forum for women.'
     //First Quote
     //'Tiffany Pham, Founder of Mogul: When I look back to my younger self, I would tell myself to be'+
     //' confident first and foremost, to believe in myself, before anyone else because if I believe in myself,'
