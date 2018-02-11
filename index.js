@@ -29,11 +29,9 @@ const STOP_MESSAGE = 'Goodbye!';
 //TODO: Replace this data with your own.  You can find translations of this data at http://github.com/alexa/skill-sample-node-js-fact/lambda/data
 //=========================================================================================================================================
 const data = [
-    'Tiffany Pham the founder of Mogul, a solely female platform for communicate and sharing ideas.' + "another sentence"
-    'After years of writing for school newspapers, and Harvard Business School she was in charge of initiative ' +
-    'and partnerships for CBS. She created her company after recieving a large response from females asking for help.' +
-    'She has faced difficulties creating the internal structure of Mogul and developing her growing company'
-    //'6. Tiffany Pham, Founder of Mogul: When I look back to my younger self, I would tell myself to be'+
+    'Tiffany Pham the founder of Mogul. Obstacle:  prioritization—figuring out which tasks will really move the needle the '
+    +'most—would be key. [I ask] myself, Out of all the tasks I have right now, what is the one that would bring back the most? And thats what I do next.'
+    //'Tiffany Pham, Founder of Mogul: When I look back to my younger self, I would tell myself to be'+
     //' confident first and foremost, to believe in myself, before anyone else because if I believe in myself,'
     //+' then others will too. And ultimately, this confidence and belief in myself would enable me to enable'
     //+'other women around the world. It’s about believing in your goals and what you are passionate about, and from that, others will become passionate about it too.'
