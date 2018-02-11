@@ -30,11 +30,19 @@ const STOP_MESSAGE = 'Goodbye!';
 //=========================================================================================================================================
 const data = [
     'Tiffany Pham the founder of Mogul. Obstacle:  prioritization—figuring out which tasks will really move the needle the '
-    +'most—would be key. [I ask] myself, Out of all the tasks I have right now, what is the one that would bring back the most? And thats what I do next.'
+    +'most—would be key. [I ask] myself, Out of all the tasks I have right now, what is the one that would bring back the most? And thats what I do next.',
+    'Vanessa Hurst the co founder of Girl Develop It and the CEO of CodeMontage. Obstacle: She struggled with the desire to want to make a diference now.'
+    +'When she joined Capital IQ she was learning more about production and ownership so she questioned her qualifications as a biomedical engineer turned developer. ',
+
+    //First Quote
     //'Tiffany Pham, Founder of Mogul: When I look back to my younger self, I would tell myself to be'+
     //' confident first and foremost, to believe in myself, before anyone else because if I believe in myself,'
     //+' then others will too. And ultimately, this confidence and belief in myself would enable me to enable'
     //+'other women around the world. It’s about believing in your goals and what you are passionate about, and from that, others will become passionate about it too.'
+
+    //Second quote
+    //'Feeling a little uncomfortable with your skills is a sign of learning, and continuous learning is what the tech industry thrives on! It’s important to seek'
+    //+' out environments where you are supported, but where you have the chance to be uncomfortable and learn new things.'
 
 ];
 
