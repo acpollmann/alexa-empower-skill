@@ -19,7 +19,7 @@ const Alexa = require('alexa-sdk');
 //Make sure to enclose your value in quotes, like this: const APP_ID = 'amzn1.ask.skill.bb4045e6-b3e8-4133-b650-72923c5980f1';
 const APP_ID = undefined;
 
-const SKILL_NAME = 'Space Facts';
+const SKILL_NAME = 'Empower Women';
 const GET_FACT_MESSAGE = "Here's your fact: ";
 const HELP_MESSAGE = 'You can say tell me a space fact, or, you can say exit... What can I help you with?';
 const HELP_REPROMPT = 'What can I help you with?';
@@ -29,7 +29,7 @@ const STOP_MESSAGE = 'Goodbye!';
 //TODO: Replace this data with your own.  You can find translations of this data at http://github.com/alexa/skill-sample-node-js-fact/lambda/data
 //=========================================================================================================================================
 const data = [
-    'A year on Mercury is just 88 days long.',
+    'Tiffany Pham the founder of Mogul, a solely female platform to allow women to communicate and share ideas. She started ',
     'Despite being farther from the Sun, Venus experiences higher temperatures than Mercury.',
     'Venus rotates counter-clockwise, possibly because of a collision in the past with an asteroid.',
     'On Mars, the Sun appears about half the size as it does on Earth.',
