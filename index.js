@@ -29,15 +29,29 @@ const STOP_MESSAGE = 'Goodbye!';
 //TODO: Replace this data with your own.  You can find translations of this data at http://github.com/alexa/skill-sample-node-js-fact/lambda/data
 //=========================================================================================================================================
 const data = [
-    'Tiffany Pham the founder of Mogul, a solely female platform to allow women to communicate and share ideas. ' +
-    'After years of writing for school newspapers, and Harvard Business School she was in charge of initiative. ' +
-    'and partnerships for CBS. She created her company after recieving a large response from femals asking for help. ' +
-    'She has faced difficulties creating the internal structure of Mogul and developing her growing company. '
-    //'6. Tiffany Pham, Founder of Mogul: When I look back to my younger self, I would tell myself to be'+
+    'Tiffany Pham the founder of Mogul. Obstacle:  prioritization—figuring out which tasks will really move the needle the '
+    +'most—would be key. [I ask] myself, Out of all the tasks I have right now, what is the one that would bring back the most? And thats what I do next.',
+    'Vanessa Hurst the co founder of Girl Develop It and the CEO of CodeMontage. Obstacle: She struggled with the desire to want to make a diference now.'
+    +'When she joined Capital IQ she was learning more about production and ownership so she questioned her qualifications as a biomedical engineer turned developer. ',
+    'Erin Teague, Director of Product of Yahoo. Obstacle: Change an industry and culture is extremely difficult. There is some progress, however the change is not going to'
+    + 'come quick. Embrace your differences and if you need to prove yourself again and again. Mever stop learning',
+    'Michelle Zatlyn, Co-Founder of CloudFlare. Obstacle: '
+    //First Quote
+    //'Tiffany Pham, Founder of Mogul: When I look back to my younger self, I would tell myself to be'+
     //' confident first and foremost, to believe in myself, before anyone else because if I believe in myself,'
     //+' then others will too. And ultimately, this confidence and belief in myself would enable me to enable'
     //+'other women around the world. It’s about believing in your goals and what you are passionate about, and from that, others will become passionate about it too.'
 
+    //Second quote
+    //' Vanessa Hurst, Co-Founder of Girl Develop It and CEO of Code Montage, Feeling a little uncomfortable with your skills is a sign of learning, and continuous'+
+    //'learning is what the tech industry thrives on! It’s important to seek out environments where you are supported, but where you have the chance to be uncomfortable and learn new things.'
+
+    //Third quote
+    //'Erin Teague, Director of Product of Yahoo, Recognize and embrace your uniqueness. I don’t think the ratios are going to change anytime soon. But, I don’t think it'
+    //+' has to be a disadvantage. Being a Black woman, being a woman in general, on a team of all men, means that you are going to have a unique voice. It’s important to embrace that.'
+
+    //Fourth quote
+    //'Michelle Zatlyn, Co-Founder of CloudFlare, people don’t take opportunities because the timing is bad, the financial side unsecure. Too many people are overanalyzing. Sometimes you just have to go for it'
 ];
 
 //=========================================================================================================================================
