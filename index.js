@@ -29,10 +29,10 @@ const STOP_MESSAGE = 'Goodbye!';
 //TODO: Replace this data with your own.  You can find translations of this data at http://github.com/alexa/skill-sample-node-js-fact/lambda/data
 //=========================================================================================================================================
 const data = [
-    'Tiffany Pham the founder of Mogul, a solely female platform to allow women to communicate and share ideas.' +
-    'After years of writing for school newspapers, and Harvard Business School she was in charge of initiative ' +
-    'and partnerships for CBS. She created her company after recieving a large response from femals asking for help.' +
-    'She has faced difficulties creating the internal structure of Mogul and developing her growing company'
+    'Tiffany Pham the founder of Mogul, a solely female platform to allow women to communicate and share ideas. ' +
+    'After years of writing for school newspapers, and Harvard Business School she was in charge of initiative. ' +
+    'and partnerships for CBS. She created her company after recieving a large response from femals asking for help. ' +
+    'She has faced difficulties creating the internal structure of Mogul and developing her growing company. '
     //'6. Tiffany Pham, Founder of Mogul: When I look back to my younger self, I would tell myself to be'+
     //' confident first and foremost, to believe in myself, before anyone else because if I believe in myself,'
     //+' then others will too. And ultimately, this confidence and belief in myself would enable me to enable'
@@ -49,6 +49,7 @@ exports.handler = function(event, context, callback) {
     alexa.appId = APP_ID;
     alexa.registerHandlers(handlers);
     alexa.execute();
+
 };
 
 const handlers = {
@@ -58,12 +59,21 @@ const handlers = {
     'GetNewFactIntent': function () {
         const factArr = data;
         const factIndex = Math.floor(Math.random() * factArr.length);
-        const randomFact = factArr[0];
-        const speechOutput = GET_FACT_MESSAGE + randomFact;
+        const randomFact = factArr[factIndex];
+        const speechOutput = GET_FACT_MESSAGE + randomFact + "Do you want to continue?";
 
         this.response.cardRenderer(SKILL_NAME, randomFact);
-        this.response.speak(speechOutput);
-        this.emit(':responseReady');
+        // this.response.speak(speechOutput);
+        console.log('this keys are ' + Object.keys(this));
+        this.emit(':ask', speechOutput);
+    },
+    'AMAZON.YesIntent': function () {
+        const speechOutput = "Access array. Do you want to continue?";
+        this.emit(':ask', speechOutput);
+    },
+    'AMAZON.NoIntent': function () {
+        const speechOutput = 'Goodbye';
+        this.emit(':tell', speechOutput);
     },
     'AMAZON.HelpIntent': function () {
         const speechOutput = HELP_MESSAGE;
