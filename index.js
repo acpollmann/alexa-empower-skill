@@ -24,6 +24,8 @@ const GET_FACT_MESSAGE = "Here's your fact: ";
 const HELP_MESSAGE = 'You can say tell me a space fact, or, you can say exit... What can I help you with?';
 const HELP_REPROMPT = 'What can I help you with?';
 const STOP_MESSAGE = 'Goodbye!';
+const CONTINUE_MESSAGE = 'Do you want to continue?';
+
 
 //=========================================================================================================================================
 //TODO: Replace this data with your own.  You can find translations of this data at http://github.com/alexa/skill-sample-node-js-fact/lambda/data
@@ -53,6 +55,9 @@ const data = [
     //Fourth quote
     //'Michelle Zatlyn, Co-Founder of CloudFlare, people don’t take opportunities because the timing is bad, the financial side unsecure. Too many people are overanalyzing. Sometimes you just have to go for it'
 ];
+const factArr = data;
+const factIndex = 0;//Math.floor(Math.random() * factArr.length);
+var attribute = {"index":0};
 
 //=========================================================================================================================================
 //Editing anything below this line might break your skill.
@@ -62,8 +67,8 @@ exports.handler = function(event, context, callback) {
     var alexa = Alexa.handler(event, context);
     alexa.appId = APP_ID;
     alexa.registerHandlers(handlers);
+    //alexa.dynamoDBTableName = 'IndexTable';
     alexa.execute();
-
 };
 
 const handlers = {
@@ -71,19 +76,32 @@ const handlers = {
         this.emit('GetNewFactIntent');
     },
     'GetNewFactIntent': function () {
-        const factArr = data;
-        const factIndex = Math.floor(Math.random() * factArr.length);
-        const randomFact = factArr[factIndex];
-        const speechOutput = GET_FACT_MESSAGE + randomFact + "Do you want to continue?";
-
-        this.response.cardRenderer(SKILL_NAME, randomFact);
+        attribute['index'] = factIndex;
+        const speechOutput = GET_FACT_MESSAGE + factArr[attribute['index']] + CONTINUE_MESSAGE;
+        this.response.cardRenderer(SKILL_NAME, speechOutput);
         // this.response.speak(speechOutput);
         console.log('this keys are ' + Object.keys(this));
+
+        //factIndex++;
+        //sessionAttributes['index'] += 1;
+        //console.log("this is the attribute for index" + this.attributes.index);
+        //console.log(sessionAttributes);
+        attribute['index'] += 1;
         this.emit(':ask', speechOutput);
     },
     'AMAZON.YesIntent': function () {
-        const speechOutput = "Access array. Do you want to continue?";
-        this.emit(':ask', speechOutput);
+        if (attribute['index'] === data.length-1) {
+            const speechOutput = 'Now it is your chance to empower the world.';
+            this.emit(':tell', speechOutput);
+        } else if  (attribute['index'] === data.length-2) {
+            const speechOutput = data[attribute['index']];
+            this.emit(':ask', speechOutput);
+            attribute['index']+=1;
+        } else {
+             const speechOutput = data[attribute['index']] + CONTINUE_MESSAGE;
+             this.emit(':ask', speechOutput);
+             attribute['index']+=1;
+        }
     },
     'AMAZON.NoIntent': function () {
         const speechOutput = 'Goodbye';
