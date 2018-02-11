@@ -29,7 +29,6 @@ const STOP_MESSAGE = 'Goodbye!';
 //TODO: Replace this data with your own.  You can find translations of this data at http://github.com/alexa/skill-sample-node-js-fact/lambda/data
 //=========================================================================================================================================
 const data = [
-<<<<<<< HEAD
     'Tiffany Pham the founder of Mogul, a solely female platform to allow women to communicate and share ideas.' +"another sentence"
     'After years of writing for school newspapers, and Harvard Business School she was in charge of initiative ' +
     'and partnerships for CBS. She created her company after recieving a large response from femals asking for help.' +
@@ -39,22 +38,6 @@ const data = [
     //+' then others will too. And ultimately, this confidence and belief in myself would enable me to enable'
     //+'other women around the world. It’s about believing in your goals and what you are passionate about, and from that, others will become passionate about it too.'
 
-=======
-    'Tiffany Pham the founder of Mogul, a solely female platform to allow women to communicate and share ideas. She started '
-    + 'this is added',
-    'Despite being farther from the Sun, Venus experiences higher temperatures than Mercury.',
-    'Venus rotates counter-clockwise, possibly because of a collision in the past with an asteroid.',
-    'On Mars, the Sun appears about half the size as it does on Earth.',
-    'Earth is the only planet not named after a god.',
-    'Jupiter has the shortest day of all the planets.',
-    'The Milky Way galaxy will collide with the Andromeda Galaxy in about 5 billion years.',
-    'The Sun contains 99.86% of the mass in the Solar System.',
-    'The Sun is an almost perfect sphere.',
-    'A total solar eclipse can happen once every 1 to 2 years. This makes them a rare event.',
-    'Saturn radiates two and a half times more energy into space than it receives from the sun.',
-    'The temperature inside the Sun can reach 15 million degrees Celsius.',
-    'The Moon is moving approximately 3.8 cm away from our planet every year.'
->>>>>>> e10d503bebf7a8ed70f70685f5a02dc65127000b
 ];
 
 //=========================================================================================================================================
