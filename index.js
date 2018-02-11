@@ -33,7 +33,8 @@ const data = [
     +'most—would be key. [I ask] myself, Out of all the tasks I have right now, what is the one that would bring back the most? And thats what I do next.',
     'Vanessa Hurst the co founder of Girl Develop It and the CEO of CodeMontage. Obstacle: She struggled with the desire to want to make a diference now.'
     +'When she joined Capital IQ she was learning more about production and ownership so she questioned her qualifications as a biomedical engineer turned developer. ',
-
+    'Erin Teague, Director of Product of Yahoo. Obstacle: It is difficult to change an industry and culture. There is some progress, however the change is not going to'
+    + 'come quick. Embrace your differences and if you need to prove yourself again and again. Mever stop learning',
     //First Quote
     //'Tiffany Pham, Founder of Mogul: When I look back to my younger self, I would tell myself to be'+
     //' confident first and foremost, to believe in myself, before anyone else because if I believe in myself,'
@@ -41,9 +42,12 @@ const data = [
     //+'other women around the world. It’s about believing in your goals and what you are passionate about, and from that, others will become passionate about it too.'
 
     //Second quote
-    //'Feeling a little uncomfortable with your skills is a sign of learning, and continuous learning is what the tech industry thrives on! It’s important to seek'
-    //+' out environments where you are supported, but where you have the chance to be uncomfortable and learn new things.'
+    //' Vanessa Hurst, Co-Founder of Girl Develop It and CEO of Code Montage, Feeling a little uncomfortable with your skills is a sign of learning, and continuous'+
+    //'learning is what the tech industry thrives on! It’s important to seek out environments where you are supported, but where you have the chance to be uncomfortable and learn new things.'
 
+    //Third quote
+    //'Erin Teague, Director of Product of Yahoo, Recognize and embrace your uniqueness. I don’t think the ratios are going to change anytime soon. But, I don’t think it'
+    //+' has to be a disadvantage. Being a Black woman, being a woman in general, on a team of all men, means that you are going to have a unique voice. It’s important to embrace that.'
 ];
 
 //=========================================================================================================================================
