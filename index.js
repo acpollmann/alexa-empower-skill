@@ -31,37 +31,37 @@ const CONTINUE_MESSAGE = 'Do you want to continue?';
 //TODO: Replace this data with your own.  You can find translations of this data at http://github.com/alexa/skill-sample-node-js-fact/lambda/data
 //=========================================================================================================================================
 const data = [
-    'Tiffany Pham the founder of Mogul. She struggles with prioritization—figuring out which tasks will really move the needle the '
-    +'most—would be key. I ask myself, Out of all the tasks I have right now, what is the one that would bring back the most? And thats what I do next.',
-    'Vanessa Hurst the co founder of Girl Develop It and the CEO of CodeMontage. She faced the desire to want to make a diference immediately but not being able to.'
-    +'When she joined Capital IQ, she learned more about production and ownership. She questioned her qualifications as a biomedical engineer turned developer, but'
-    +'her enjoyment and challenges encoraged ',
-    'Erin Teague, Director of Product of Yahoo. Obstacle: Change in an industry and culture is extremely difficult. There is some progress, however the change is not going to'
-    + 'come quick. Embrace your differences and if you need to prove yourself again and again. Never stop learning',
-    'Michelle Zatlyn, Co-Founder of CloudFlare. She grew up in Canada, never expecting to co-found a billion dollar company. She made the decision'
-    +' to immigrate to the US, and with hard work helped build CloudFlare to its size today. Despite difficulties immigrating she perservered. ',
-    'Amber Gordon the Founder of Femsplain was feeling uninspired and at a dead end at her job in Tumblr, so unhappy with her decision she decided to'+
-    +'accommplish her goal: allowing women to share real stores and empower women to stop waiting and act.'
-    //First Quote
-    //'Tiffany Pham, Founder of Mogul: When I look back to my younger self, I would tell myself to be'+
-    //' confident first and foremost, to believe in myself, before anyone else because if I believe in myself,'
-    //+' then others will too. And ultimately, this confidence and belief in myself would enable me to enable'
-    //+'other women around the world. It’s about believing in your goals and what you are passionate about, and from that, others will become passionate about it too.'
+        'Tiffany Pham the founder of Mogul. She struggled with prioritization—figuring out which tasks would move the needle and  '
+        +'would be key. She woud ask herself, Out of all the tasks I have right now, what is the one that would bring back the most? And thats what she would do next.',
+        'Vanessa Hurst the co founder of Girl Develop It and the CEO of CodeMontage. She faced the desire to want to make a diference immediately but was not able to.'
+        +'When she joined Capital IQ, she learned more about production and ownership. She questioned her qualifications as a biomedical engineer turned developer, but'
+        +'her enjoyment and challenges encoraged ',
+        'Erin Teague, Director of Product of Yahoo. Obstacle: Change in an industry and culture is extremely difficult. There is some progress, however the change is not going to'
+        + 'come quick. Embrace your differences and if you need to prove yourself again and again. Never stop learning',
+        'Michelle Zatlyn, Co-Founder of CloudFlare. She grew up in Canada, never expecting to co-found a billion dollar company. She made the decision'
+        +' to immigrate to the US, and with hard work helped build CloudFlare to its size today. Despite difficulties immigrating she perservered. ',
+        'Amber Gordon the Founder of Femsplain was feeling uninspired and at a dead end at her job in Tumblr, so unhappy with her decision she decided to'+
+        +'accommplish her goal: allowing women to share real stores and empower women to stop waiting and act.'
+        //First Quote
+        //'Tiffany Pham, Founder of Mogul: When I look back to my younger self, I would tell myself to be'+
+        //' confident first and foremost, to believe in myself, before anyone else because if I believe in myself,'
+        //+' then others will too. And ultimately, this confidence and belief in myself would enable me to enable'
+        //+'other women around the world. It’s about believing in your goals and what you are passionate about, and from that, others will become passionate about it too.'
 
-    //Second quote
-    //' Vanessa Hurst, Co-Founder of Girl Develop It and CEO of Code M-ontage, Feeling a little uncomfortable with your skills is a sign of learning, and continuous'+
-    //'learning is what the tech industry thrives on! It’s important to seek out environments where you are supported, but where you have the chance to be uncomfortable and learn new things.'
+        //Second quote
+        //' Vanessa Hurst, Co-Founder of Girl Develop It and CEO of Code M-ontage, Feeling a little uncomfortable with your skills is a sign of learning, and continuous'+
+        //'learning is what the tech industry thrives on! It’s important to seek out environments where you are supported, but where you have the chance to be uncomfortable and learn new things.'
 
-    //Third quote
-    //'Erin Teague, Director of Product of Yahoo, Recognize and embrace your uniqueness. I don’t think the ratios are going to change anytime soon. But, I don’t think it'
-    //+' has to be a disadvantage. Being a Black woman, being a woman in general, on a team of all men, means that you are going to have a unique voice. It’s important to embrace that.'
+        //Third quote
+        //'Erin Teague, Director of Product of Yahoo, Recognize and embrace your uniqueness. I don’t think the ratios are going to change anytime soon. But, I don’t think it'
+        //+' has to be a disadvantage. Being a Black woman, being a woman in general, on a team of all men, means that you are going to have a unique voice. It’s important to embrace that.'
 
-    //Fourth quote
-    //'Michelle Zatlyn, Co-Founder of CloudFlare, people don’t take opportunities because the timing is bad, the financial side unsecure. Too many people are overanalyzing. Sometimes you just have to go for it'
+        //Fourth quote
+        //'Michelle Zatlyn, Co-Founder of CloudFlare, people don’t take opportunities because the timing is bad, the financial side unsecure. Too many people are overanalyzing. Sometimes you just have to go for it'
 
-    //Fifth quotes
-    //'Amber Gordon,Founder of Femsplain,  Trust in yourself, believe that your voice matters, and know that your words are good enough. She decided to form Femsplain against'
-    //+ 'people who did not agree with the purpose of the forum for women.''
+        //Fifth quotes
+        //'Amber Gordon,Founder of Femsplain,  Trust in yourself, believe that your voice matters, and know that your words are good enough. She decided to form Femsplain against'
+        //+ 'people who did not agree with the purpose of the forum for women.''
 ];
 const factArr = data;
 const factIndex = 0;//Math.floor(Math.random() * factArr.length);
