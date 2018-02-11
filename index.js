@@ -3,6 +3,9 @@
 /**
  * This sample demonstrates a simple skill built with the Amazon Alexa Skills
  * nodejs skill development kit.
+ * This sample supports multiple lauguages. (en-US, en-GB, de-DE).
+ * The Intent Schema, Custom Slots and Sample Utterances for this skill, as well
+ * as testing instructions are located at https://github.com/alexa/skill-sample-nodejs-fact
  **/
 
 'use strict';
@@ -54,11 +57,14 @@ let attribute = {"index":0, "inner":0};
 
 
 //=========================================================================================================================================
+//Editing anything below this line might break your skill.
+//=========================================================================================================================================
 
 exports.handler = function(event, context, callback) {
     var alexa = Alexa.handler(event, context);
     alexa.appId = APP_ID;
     alexa.registerHandlers(handlers);
+    //alexa.dynamoDBTableName = 'IndexTable';
     alexa.execute();
 };
 
@@ -70,8 +76,27 @@ const handlers = {
         const speechOutput = "Are you ready to be empowered?"
         this.response.speak(speechOutput);
         this.emit(':ask', speechOutput);
+
+        //attribute['index'] = factIndex;
+        //data[attribute['inner']] = 0;
+        // const speechOutput = GET_FACT_MESSAGE + factArr[attribute['index']['inner']] + CONTINUE_MESSAGE;
+        // this.response.cardRenderer(SKILL_NAME, speechOutput);
+        // // this.response.speak(speechOutput);
+        // console.log('this keys are ' + Object.keys(this));
+
+        // //factIndex++;
+        // //sessionAttributes['index'] += 1;
+        // //console.log("this is the attribute for index" + this.attributes.index);
+        // //console.log(sessionAttributes);
+        // attribute['index'] += 1;
+        // this.emit(':ask', speechOutput);
     },
     'AMAZON.YesIntent': function () {
+        // const speechOutput = GET_FACT_MESSAGE + data[attribute['index']][attribute['inner']] + CONTINUE_MESSAGE;
+        // this.response.cardRenderer(SKILL_NAME, speechOutput);
+        // attribute['index']++;
+        // attribute['inner']++;
+        // this.response.speak(speechOutput);
         console.log('this keys are ' + Object.keys(this));
         if (attribute['inner'] === data[attribute['index']].length  ) {
              const speechOutput = 'Now it is your chance to empower the world.';
@@ -93,7 +118,28 @@ const handlers = {
              this.emit(':ask', speechOutput);
             //attribute['index']+=1;
 
+
         }
+
+        //factIndex++;
+        //sessionAttributes['index'] += 1;
+        //console.log("this is the attribute for index" + this.attributes.index);
+        //console.log(sessionAttributes);
+
+        // attribute['index'] += 1;
+        // this.emit(':ask', speechOutput);
+        // if (attribute['index'] === data.length-1) {
+        //     const speechOutput = 'Now it is your chance to empower the world.';
+        //     this.emit(':tell', speechOutput);
+        // } else if  (attribute['index'] === data.length-2) {
+        //     const speechOutput = data[attribute['index']];
+        //     this.emit(':ask', speechOutput);
+        //     attribute['index']+=1;
+        // } else {
+        //      const speechOutput = data[attribute['index']] + CONTINUE_MESSAGE;
+        //      this.emit(':ask', speechOutput);
+        //      attribute['index']+=1;
+        // }
     },
     'AMAZON.NoIntent': function () {
         const speechOutput = 'Goodbye';
