@@ -37,9 +37,9 @@ const data = [
     'Erin Teague, Director of Product of Yahoo. Obstacle: Change in an industry and culture is extremely difficult. There is some progress, however the change is not going to'
     + 'come quick. Embrace your differences and if you need to prove yourself again and again. Never stop learning',
     'Michelle Zatlyn, Co-Founder of CloudFlare. She grew up in Canada, never expecting to co-found a billion dollar company. She made the decision'
-    +' to immigrate to the US, and with hard work helped build CloudFlare to its size today',
-    'Amber Gordon, Trust in yourself, believe that your voice matters, and know that your words are good enough. She decided to form Femsplain against'
-    + 'people who did not agree with the purpose of the forum for women.'
+    +' to immigrate to the US, and with hard work helped build CloudFlare to its size today. Despite difficulties immigrating she perservered. ',
+    'Amber Gordon the Founder of Femsplain was feeling uninspired and at a dead end at her job in Tumblr, so unhappy with her decision she decided to'+
+    +'accommplish her goal: allowing women to share real stores and empower women to stop waiting and act.'
     //First Quote
     //'Tiffany Pham, Founder of Mogul: When I look back to my younger self, I would tell myself to be'+
     //' confident first and foremost, to believe in myself, before anyone else because if I believe in myself,'
@@ -56,6 +56,10 @@ const data = [
 
     //Fourth quote
     //'Michelle Zatlyn, Co-Founder of CloudFlare, people don’t take opportunities because the timing is bad, the financial side unsecure. Too many people are overanalyzing. Sometimes you just have to go for it'
+
+    //Fifth quotes
+    //'Amber Gordon,Founder of Femsplain,  Trust in yourself, believe that your voice matters, and know that your words are good enough. She decided to form Femsplain against'
+    //+ 'people who did not agree with the purpose of the forum for women.''
 ];
 
 //=========================================================================================================================================
